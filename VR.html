@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-
-
 <head>
-
+  <link rel="stylesheet" href="styles.css">
   <style>
-    <link rel="stylesheet" href="styles.css">
+    .virtual {
+        /*background-color:	#F08080;*/
+        background-color: #54535D;
+    }
+    .parallax-container {
+      width:840px;
+      height: 1000px;
+    }
     #myVideo {
       position: fixed;
       margin-left:0px;
@@ -14,20 +19,29 @@
       margin-bottom:0px;
       right: 0;
       bottom: 0;
-      height:  100%;
       min-width: 100%;
       min-height: 100%;
-  }
+    }
+    .content {
+      color: #F6F6F6;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 20px;
+      line-height: 1.45;
+    }
+    .vr {
+      color: #B5B5B5;
+    }
 
   </style>
 </head>
-<body>
-  <div class="parallax-container">
-    <video autoplay muted loop id="myVideo">
-      <source src="3D_screencapture.mp4" type="video/mp4">
-    </video>
-  </div>
+<body class="virtual">
+<div class="parallax-container">
+  <video autoplay muted loop id="myVideo" width="840" height="1000">
+    <source src="3D_screencapture.mp4" type="video/mp4">
+  </video>
+</div>
   <div class="content">
+    <h1 class="vr"> Cappilary Vessel Visualization </h1>
     <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula pulvinar erat id lobortis. Mauris sodales vel nulla sit amet dapibus. Duis luctus porttitor leo. Nulla vulputate arcu ut dui dignissim, iaculis posuere augue ultrices. Aenean suscipit sapien in orci venenatis maximus. Donec nisl elit, suscipit quis bibendum vitae, venenatis quis lacus. Suspendisse id dui eget nisi interdum sagittis. Vestibulum a ex erat. Aenean leo elit, viverra quis vulputate vitae, elementum sit amet nibh. Nulla rhoncus quam a justo molestie, ut gravida risus condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris rutrum congue tellus ac ullamcorper. Vivamus nunc augue, interdum id turpis in, commodo condimentum quam.
 
@@ -38,5 +52,5 @@
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel sagittis diam. Etiam efficitur arcu vitae sollicitudin euismod. Fusce vitae diam non orci bibendum efficitur. Phasellus euismod convallis mollis. Mauris nec molestie diam, eu tempor nisi. Vivamus eget nibh id enim tempus congue nec non ipsum. Mauris sollicitudin mauris lectus, id dapibus nulla fringilla vestibulum. Duis ultrices diam vel augue molestie gravida. Sed convallis tincidunt lectus vel sodales. Proin vel augue nec lacus euismod elementum sed id augue. Sed bibendum at sem id rutrum. Integer euismod, neque nec fermentum dignissim, felis orci viverra dolor, sed rutrum metus magna id augue.
 
   Ut at pellentesque eros. Suspendisse potenti. Vestibulum vel feugiat enim, nec lacinia felis. Donec convallis bibendum metus eu interdum. Nunc venenatis ligula at ipsum fringilla, nec tempus nisi sagittis. Suspendisse ac placerat turpis. Nulla eu gravida justo, sed vestibulum felis. Quisque ut fringilla eros. Duis euismod maximus arcu, in suscipit risus cursus in. Nulla mattis at felis porta pharetra. Pellentesque sed diam ante. Etiam nec venenatis lectus, vel elementum ex.</p>
-
+</div>
 </body>
