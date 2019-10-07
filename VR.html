@@ -6,6 +6,9 @@
     .virtual {
         /*background-color:	#F08080;*/
         background-color: #54535D;
+        -webkit-animation: fadeInBackground ease 2s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode: forwards;
     }
     .parallax-container {
       width:840px;
@@ -31,10 +34,41 @@
     .vr {
       color: #B5B5B5;
     }
+    @keyframes fadeInBackground {
+      from {
+          background-color: #F08080;
+      }
+      to {
+          background-color: #54535D;
+
+       }
+    }
 
   </style>
 </head>
 <body class="virtual">
+  <script>
+    var e = document.getElementById("myVideo");
+    e.style.opacity = 0;
+
+    var vid = document.getElementById("myVideo");
+    vid.oncanplaythrough = function() {
+      setTimeout(function() {
+          var e = document.getElementById('myVideo');
+          fade(e);
+      }, 5000);
+    };
+
+    function fade(element) {
+      var op = 0;
+      var timer = setInterval(function() {
+          if (op >= 1) clearInterval(timer);
+          element.style.opacity = op;
+          element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+          op += op * 0.1 || 0.1;
+      }, 50);
+    }
+  </script>
 <div class="parallax-container">
   <video autoplay muted loop id="myVideo" width="840" height="1000">
     <source src="3D_screencapture.mp4" type="video/mp4">
