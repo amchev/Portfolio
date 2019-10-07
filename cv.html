@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
+  <style>
+  </style>
+</head>
+<body class="cv">
+  <script>
+    function increaseOpacity(){
+      var highlightO = document.getElementsByClassName("orange");
+      for (var i = 0; i<highlightO.length; i++){
+        highlightO[i].style.background = "hsla(11, 80%, 60%,0.7)";
+      }
+      var highlightB = document.getElementsByClassName("blue");
+      for (var i = 0; i<highlightB.length; i++){
+        highlightB[i].style.background = "hsla(203, 80%, 60%,0.7)";
+      }
+    }
+    function decreaseOpacity(){
+      var highlightList = document.getElementsByClassName("highlight");
+      for (var i = 0; i<highlightList.length;i++){
+        highlightList[i].style.background = '#f29696';
+      }
+    }
+    function highlightSkill(skill){
+      var highlightskill =  document.getElementsByClassName(skill);
+      for (var i = 0; i < highlightskill.length; i++){
+        highlightskill[i].style.background = "hsla(11, 80%, 60%,0.7)";
+      }
+    }
+    function increaseLevel(){
+      var levels = document.getElementsByClassName("fill");
+      for (var i = 0; i < levels.length; i++){
+        levels[i].style.fill = "#33B2FF";
+      }
+    }
+    function decreaseLevel(){
+      var levels = document.getElementsByClassName("fill");
+      for (var i = 0; i < levels.length; i++){
+        levels[i].style.fill = "#A1A1A1";
+      }
+    }
+    function increaseExp(){
+      var highlightO = document.getElementsByClassName("keyWordO");
+      for (var i = 0; i<highlightO.length; i++){
+        //highlightO[i].style.background = "hsla(11, 80%, 60%,0.7)";
+        highlightO[i].style.textDecoration = "underline";
+        highlightO[i].style.textDecorationStyle =  "double";
+        highlightO[i].style.textDecorationColor= "hsla(11, 80%, 60%,1)";
+
+      }
+      var highlightB = document.getElementsByClassName("keyWordB");
+      for (var i = 0; i<highlightB.length; i++){
+        //highlightB[i].style.background = "hsla(11, 80%, 60%,0.7)";
+        highlightB[i].style.textDecoration = "underline";
+        highlightB[i].style.textDecorationStyle =  "double";
+        highlightB[i].style.textDecorationColor= "hsla(203, 80%, 60%,1)";
+
+      }
+    }
+    function decreaseExp(){
+        var highlightList = document.getElementsByClassName("keyWordO");
+        for (var i = 0; i<highlightList.length;i++){
+          //highlightList[i].style.background = '#f29696';
+          highlightList[i].style.textDecoration = "none";
+        }
+        highlightList = document.getElementsByClassName("keyWordB");
+        for (var i = 0; i <highlightList.length; i++){
+            highlightList[i].style.textDecoration = "none";
+        }
+    }
+  </script>
+  <div id="space">
+  </div>
+  <div id="box">
+    <div id="content">
+    <div class="name"> Amber Chevannes </div>
+    <hr> <br>
+
+    <div class="section" onmouseover="increaseOpacity();" onmouseout="decreaseOpacity();">
+
+      <div class="sectTitle" align="left" >  <strong> EDUCATION  </strong> </div>
+      <br>
+
+      <div id = "education">
+
+          <span class="inlineleft">
+            <span class="highlight orange"> Master's of Science</span> in
+            <span class="highlight blue"> Biotechnology </span>
+          </span class="inlineleft">
+
+        <span class="inlineright"> Brown University, May
+            <span class="highlight orange"> 2019</span class="highlight">
+          </span class="inlineright">
+          <br class= "small">
+          <p> Brown University MPPB Department, Dr. Nicolas Fawzi's Laboratory </p>
+          <p> <strong> Thesis Project: </strong> <span class="highlight blue"> Computational</span> Methods for Evaluating <span class="highlight blue">FUS Protein</span> Mutation Pathology  </p>
+          <p class="description"> There are a number of mutations within FUS that have been linked to disease, but the mechanism of the FUS protein’s involvement in disease development, as well as the abundance of the genetic familial studies, casts doubt on many of these mutations.
+            Specifically, a number of point mutations and point deletions have been identified through genetic surveys.
+            The lack of familial genetic information as well as the unstructured nature of the FUS protein leaves the pertinence of mutations undetermined. “Human pathogenic amino acid substitutions tend to occur at less variable sites of proteins. [7]” This project focused on creating a model extrapolated from this evolutionary idea where identifying areas of low evolutionaryvariation, can identify human pathogenic substitions. </p>
+      <br class="small">
+
+          <span class="inlineleft">
+            <span class="highlight orange">Bachelor's of Science</span> in
+            <span class="highlight blue"> Biology </span>
+          </span class="inlineleft">
+
+          <span class="inlineright"> Tufts University,  May
+            <span class="highlight orange">2017</span class="highlight">
+            </span class="innerright">
+            <br class="small">
+            <p> Tufts Medical Center MCRI, Dr. Gavin Schnitzler</p>
+            <p> <strong> Summer Scholar Project: </strong> Understanding the Role of ER alpha in Estrogen’s Vascular-Protective Effects </p>
+            <p class="description">  Develop and execute a project to investigate the physiological functions of cardiac cells mediated by estrogen. Communicate and cooperate with a large team toward molecular research efforts.
+              Disseminate research findings at the two-day Tufts Summer Scholars Conference.</p>
+      <br>
+      <div align="center">
+        <img src="brown.png" width="15" height="25">
+        <img src="tufts.png" width="25" height="25">
+      </div>
+      </div id="education">
+
+    </div class="section">
+
+    <hr>
+   <div class="section" onmouseover="increaseLevel();" onmouseout="decreaseLevel();">
+     <br>
+     <div class="sectTitle" align="left"> SKILLS </div>
+
+     <div class="row">
+       <div class="column1"> <p onmouseover="highlightSkill('data');" onmouseout="decreaseOpacity();"> <span class="highlight data"> <b> Data Visualization </b> </span> </p>
+         <p onmouseover="highlightSkill('SC');" onmouseout="decreaseOpacity();"> <span class="highlight SC"> <b> Scientific Computing </b></span> </p>
+         <p onmouseover="highlightSkill('VR');" onmouseout="decreaseOpacity();"> <span class="highlight VR"> <b> VR/ 3D Rendering</b></span> </p>
+       </div>
+       <div  class="columns">
+         <!--img src="python.png" width="20" height="20">
+         <img src="cplusplus.png"  class = "highlight data" width="20" height="20">
+         <img src="keras.png" width="38" height="20"-->
+         <p> <span class="highlight SC">Python</span>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg>
+         </p>
+         <p> Java
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg> </p>
+         <p> <span class="highlight SC VR">C++</span>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg>
+         <svg height="10" width="10">
+           <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+         </svg> </p>
+      </div>
+      <div class="columns">
+        <p> <span class="highlight SC">ScikitLearn</span>
+          <svg height="10" width="10">
+            <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg></p>
+        <p> MongoDB
+          <svg height="10" width="10">
+            <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg></p>
+        <p> <span class="highlight VR">VTK</span>
+          <svg height="10" width="10">
+            <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+          <svg height="10" width="10">
+            <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg></p>
+      </div>
+      <div class="columns">
+        <p> <span class="highlight data">D3</span>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+        </p>
+        <p> <span class="highlight SC">NumPy</span>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+        </p>
+        <p> <span class="highlight SC">TensorFlow</span>
+          <svg height="10" width="10">
+            <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+        </p>
+      </div>
+      <div class="columns">
+        <p> <span class="highlight data">HTML/CSS/JS</span>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg></p>
+        <p> Pandas
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+        </p>
+        <p> Linux
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg>
+          <svg height="10" width="10">
+          <circle class= "fill" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+          </svg></p>
+        </div>
+     </div class="row">
+     <div class="symbols">
+       <!--img src="cplusplus.png" width="25" height="25">
+       <img src="git.png" width="35" height="25">
+       <img src="mongo.png" width="50" height="25">
+       <img src="keras.png" width="45" height="25">
+       <img src="pandas.png" width="45" height="25">
+       <img src="python.png" width="25" height="25">
+       <img src="vtk.png" width="55" height="25">
+       <img src="websuite.jpg" width="30" height="25">
+       <img src="java.png" width="25" height="25">
+       <img src="openMPI.png" width="25" height="25">
+       <img src="scikit.png" width="35" height="25">
+       <img src="aws.png" width="35" height="25"-->
+     </div>
+   </div class="section">
+   <hr>
+   <div class="section" onmouseover="increaseExp();" onmouseout="decreaseExp();">
+     <div class="sectTitle" align="left"> EXPERIENCE </div>
+     <div class="skill">
+       <p> <b> Scientific Visualization Research Programmer </b> <span class="inlineright"> February 2019 - July 2019</span></p>
+       <p> Brown University Computer Science Department </p>
+   </div>
+     <p class="description"> <svg height="10" width="10">
+       <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+     </svg> <span class = "keyWordO"> Evaluate</span>, <span class = "keyWordO">Build</span> and <span class = "keyWordO">Test</span> <span class = "keyWordO">software tools</span> available for scientific <span class = "keyWordO">VR</span> applications. <br>
+     <svg height="10" width="10">
+       <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+     </svg> <span class = "keyWordO">Create immersive VR experiences</span> for biomedical scientists to do complex visual analysis of <span class = "keyWordO">research data</span>. <br>
+     <svg height="10" width="10">
+       <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+     </svg> <span class = "keyWordO">Collaborate</span> with multiple research teams across the university to investigate VR as an avenue for <span class = "keyWordO">data analysis</span>.</p>
+     <div class="skill">
+
+       <p> <b> Summer Immersion Program Instructor at AT&T </b> <span class="inlineright">June 2018 - August 2018 </span></p>
+       <p> Girls Who Code </p>
+       <p>  </p>
+    </div>
+     <p class="description">  <svg height="10" width="10">
+       <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+     </svg> Prepare and deliver lessons in Scratch, <span class = "keyWordB"> Python</span>, <span class = "keyWordB">Arduino C</span>, <span class = "keyWordB">HTML, CSS, and JS</span> for 20 high school girls.<br>
+     <svg height="10" width="10">
+      <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+    </svg> <span class = "keyWordB">Manage</span> 2 Teaching Assistants by providing them with tools CS instruction and setting up daily meetings.<br>
+    <svg height="10" width="10">
+      <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+    </svg> Act as a <span class = "keyWordB">liaison to AT&T</span> employees and executive guests.<br></p>
+
+   </div>
+   <hr>
+   <div class="section">
+   <div class="sectTitle" align="left"> PROJECTS </div>
+  <p class="description"> Center for Computation & Visualization, Brown University, <span class="blink">Develop 3D vessel map of engineered cardiac grafts</span> for an immersive VR Theater for investigation of biomaterial vascularization.</p>
+   School of Engineering, Brown University, Improve open source 3D game engine for realistic jellyfish movement utilizing scientific computing techniques and animal movement modeling research.
+  </div>
+  <hr>
+  <div class="section">
+    <div class ="sectTitle" align="left"> AWARDS & FELLOWSHIPS </div>
+    AAUW Selected Professions Fellow 2017, awarded by the American Association of University Women for professional promise in the field of STEM.
+  Presidential Scholars Program Graduate Fellow 2018, academic and research mentor to undergraduate students in STEM fields.
+  </div>
+  <div class="section">
+    <div class="sectTitle" align="left">
+
+ </div id="content">
+</div>
+</body>

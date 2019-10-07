@@ -1,0 +1,306 @@
+h1{
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  color:		#F08080;
+  opacity: 0.3;
+  font-size: 100px;
+  text-align: left;
+  transition: opacity 2s;
+  margin-bottom: -1px;
+  margin-top: 0px;
+
+}
+textarea:focus, input:focus{
+  outline: 0;
+}
+/*  BODY FOR  HOMPAGE */
+.homepage {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: 	#F08080;
+  position: relative;
+  text-align: center;
+}
+
+/* NAME TITLE FADE IN */
+.title{
+  -webkit-animation: fadeInAnimation ease 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+/*  Page dots  CSS */
+.dot{
+  -webkit-animation: fadeInButtons ease 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+.dot:hover{
+  -webkit-animation: fadeUpButtons ease 0.25s;
+  -webkit-animation: colorChange ease 0.25s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+.dot {
+  background-color: 	#F08080;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  border: none;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+  margin: 40px;
+  font-size: 30px;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+}
+.dot_blue{
+  background-color:#F08080;
+  color: #F08080;
+}
+.dot_pink{
+  color: #F08080;
+  background-color:#F08080;
+}
+.dot_yellow{
+  color: #F08080;
+  background-color:#F08080;
+}
+.dot_green{
+  color: #F08080;
+  background-color:#F08080;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 0.3;
+   }
+}
+@keyframes fadeInButtons {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 0.3;
+   }
+}
+@keyframes fadeUpButtons {
+  from {
+      opacity: 0.3;
+  }
+  to {
+      opacity: 0.7;
+
+   }
+}
+@keyframes colorChange {
+from{
+  background-color: #F08080;
+}
+to{
+  background-color: #DAF7A6;
+}
+}
+/* Linked IN button */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+/* Spacing  */
+.space {
+  margin: 130px;
+}
+
+
+/*-----------  CV SECTION ---------------*/
+
+
+/* COLORS */
+/* neon yellow #DAF7A6 */
+/* background #F08080*/
+/* paper color #f29696 */
+/* dark red #800C0C */
+/* yellow  #FFC300 */
+/* orange #FF5733 */
+/* blue #33B2FF  */
+
+
+.cv {
+  background-color: 	#F08080;
+}
+/* WRAPPER TO MAKE SURE THE BOTTOM SHADING IS  CONTAINED */
+#content{
+  overflow: auto;
+  height: 100%;
+  position: relative;
+  -webkit-animation: fadeInWords ease 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+#space{
+  height: 50px;
+}
+/* Paper-Like effect */
+#box{
+  width:  60%;
+  height: 600px;
+  margin: auto;
+  padding-bottom: 10px;
+  background-color: #f29696;
+  position: relative;
+  -moz-border-radius: 4px;
+  padding: 2em 1.5em;
+  /*color: #CF8383;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+  line-height: 1.5;*/
+  font-size: 20px;
+  margin: 20px auto;
+  box-shadow: 6px 6px 0 -6px black, 8px 0 6px -8px black;
+  -webkit-animation: fadeInPaper ease 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+#box:before, #box:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  transform: rotate(-3deg);
+}
+#box:after {
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+/* Title page  */
+.name {
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+  color:  #f29696;
+  text-shadow: 3px 2px #FF5733  ;
+  font-size: 60px;
+  font-family: 'Ubuntu', sans-serif;
+}
+/* Break up the page  */
+hr {
+  display: block;
+  background-color: black;
+  noshade: noshade;
+}
+/* Sizing for section titles */
+.sectTitle {
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+}
+
+#education {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  transition: 1s;
+}
+/* highlight and spacing for first section */
+.highlight {
+  opacity: 1;
+  transition: 1s;
+}
+.inlineleft{
+  display: inline;
+  float: left;
+  text-align: left;
+}
+.inlineright{
+  float: right;
+  text-align: right;
+}
+/* Skills section table */
+.column1 {
+  float: left;
+  width: 30%;
+}
+.columns {
+  float: left;
+  width: 17%;
+}
+.row {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+  margin-left: 10px;
+}
+
+/* text spacing */
+.small {
+  margin: 2px;
+}
+.description {
+  margin-left: 15px;
+  font-size: 13px;
+  line-height: 16px;
+}
+.symbols {
+  text-align: center;
+}
+p{
+  margin-left: 10px;
+  transition:  1s;
+}
+svg{
+  display:inline;
+}
+.fill {
+  transition: 1s;
+}
+frames fadeInPaper{
+    0% {
+        background-color: #F08080;
+        text-shadow: none;
+    }
+    100% {
+        background-color: #f29696;
+     }
+}
+@keyframes fadeInWords{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+.skill {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  transition: 1s;
+  line-height: 14px;
+}
+.keyWordO {
+  transition: 1s;
+  text-decoration-color: #eb6547;
+  transition: text-decoration 1s ease;
+  -webkit-text-decoration-skip: ink;
+}
+.keyWordB {
+  transition: 1s;
+    -webkit-text-decoration-skip: ink;
+}
