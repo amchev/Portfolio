@@ -259,7 +259,8 @@ hr {
   font-family: 'Ubuntu', sans-serif;
   margin-left: 15px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 22px;
+  margin-botton: 5px;
 }
 .symbols {
   text-align: center;
@@ -328,5 +329,8 @@ svg{
   transition: 1s;
 }
 .awardHighlightO{
+  transition: 1s;
+}
+.underline{
   transition: 1s;
 }

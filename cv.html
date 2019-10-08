@@ -19,11 +19,31 @@
       for (var i = 0; i<highlightB.length; i++){
         highlightB[i].style.background = "hsla(203, 80%, 60%,0.7)";
       }
+      var underlineB = document.getElementsByClassName("underlineB");
+      for (var i = 0; i<underlineB.length; i++){
+        //highlightO[i].style.background = "hsla(11, 80%, 60%,0.7)";
+        underlineB[i].style.textDecoration = "underline";
+        underlineB[i].style.textDecorationStyle =  "double";
+        underlineB[i].style.textDecorationColor= "hsla(203, 80%, 60%,1)";
+
+      }
+      var underlineO = document.getElementsByClassName("underlineO");
+      for (var i = 0; i<underlineO.length; i++){
+        //highlightO[i].style.background = "hsla(11, 80%, 60%,0.7)";
+        underlineO[i].style.textDecoration = "underline";
+        underlineO[i].style.textDecorationStyle =  "double";
+        underlineO[i].style.textDecorationColor= "hsla(11, 80%, 60%,1)";
+
+      }
     }
     function decreaseOpacity(){
       var highlightList = document.getElementsByClassName("highlight");
       for (var i = 0; i<highlightList.length;i++){
         highlightList[i].style.background = '#f29696';
+      }
+      var underline =  document.getElementsByClassName("underline");
+      for (var i = 0; i<underline.length;i++){
+      underline[i].style.textDecoration = "none";
       }
     }
     //  HIGHLIGHTS THE SKILL  AREA
@@ -164,12 +184,12 @@
           <p> <strong> Thesis Project: </strong> <span class="highlight blue"> Computational</span> Methods for Evaluating <span class="highlight blue">FUS Protein</span> Mutation Pathology  </p>
           <p class="description"> The FUS protein or Fused in Sarcoma protein, is an RNA binding protein that regulates various
             translation and transcription processes. A number of mutations within the FUS protein
-            have been linked clinically to the development of <span class="highlight blue">ALS</span>, a debilitating neurdegenerative disease.
-            Following standard evolutionary assumptions, we can extrapolate that <span class="highlight blue">less evolutionary variable sites within proteins</span> correspond to
-            amino acid locations <span class="highlight blue">critical for normal protein function</span> within the body.
-            This thesis project focused on <span class="highlight blue">creating a statistical model</span> extrapolated from this basic evolutionary principle. By
-            identifying areas of low evolutionary variation, we were able to <span class="highlight blue">classify clinically identified mutations</span> as pathogenic or non-pathogenic.
-            Using <span class="highlight blue">python data analysis packages</span> and a <span class="highlight blue">web based D3 visualization library</span>, this project resulted in both <span class="highlight blue">visual and mathematical models</span> for the
+            have been linked clinically to the development of <span class="underline underlineB">ALS</span>, a debilitating neurdegenerative disease.
+            Following standard evolutionary assumptions, we can extrapolate that <span class="underline underlineB">less evolutionary variable sites within proteins</span> correspond to
+            amino acid locations <span class="underline underlineB">critical for normal protein function</span> within the body.
+            This Graduate thesis project focused on <span class="underline underlineB">creating a statistical model</span> extrapolated from this basic evolutionary principle. By
+            identifying areas of low evolutionary variation, we were able to <span class="underline underlineB">classify clinically identified mutations</span> as pathogenic or non-pathogenic.
+            Using <span class="underline underlineB">python data analysis packages</span> and a <span class="underline underlineB">web based D3 visualization library</span>, this project resulted in both <span class="underline underlineB">visual and mathematical models</span> for the
             FUS protein's genetic involvement in ALS on an individual amino acid scale  </p>
       <br class="small">
 
@@ -184,8 +204,9 @@
             <br class="small">
             <p> Tufts Medical Center MCRI, Dr. Gavin Schnitzler</p>
             <p> <strong> Summer Scholar Project: </strong> Understanding the Role of ER alpha in Estrogen’s Vascular-Protective Effects </p>
-            <p class="description">  Develop and execute a project to investigate the physiological functions of cardiac cells mediated by estrogen. Communicate and cooperate with a large team toward molecular research efforts.
-              Disseminate research findings at the two-day Tufts Summer Scholars Conference.</p>
+            <p class="description"> <span class="underline  underlineO">Estrogen Receptor Alpha</span> is thought to be an upstream regulator cardiac remodeling.
+              This Undergraduate Research project was developed and executed in order to investigate the <span class="underline underlineO">physiological and immulogical</span> functions of cardiac cells in the presecence of estrogen.
+              Observing these effects of estrogen <span class="underline underlineO">provided support for estrogen as an agent of vascular-protection</span>.</p>
       <br>
       <div align="center">
         <img src="brown.png" width="15" height="25">
