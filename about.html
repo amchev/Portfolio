@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+  .about {
+    text-align:center;
+    background-color:#F08080;
+    color:#555;
+    font-family:'Roboto';
+    font-weight:300;
+    font-size:32px;
+    padding-top:30px;
+    height: 600px;
+    /*overflow:hidden;*/
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+  }
+
+  .Name2 {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  animation-iteration-count: 1;
+  -webkit-text-stroke: 1px black;
+  color:  #f29696;
+  text-shadow: 3px 2px #FF5733  ;
+  font-size: 60px;
+  font-family: 'Ubuntu', sans-serif;
+  }
+  .head{
+    border-radius: 50%;
+  }
+
+  .Name2:first-of-type {
+    /* For increasing performance
+      ID/Class should've been used.
+      For a small demo it's okaish for now */
+    animation: showup 7s;
+  }
+
+  .Name2:last-of-type {
+    width:0px;
+    animation: reveal 7s;
+  }
+
+  .Name2:last-of-type span {
+    margin-left:-355px;
+    animation: slidein 7s ;
+  }
+
+@keyframes showup {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  80% {opacity:1;}
+  100% {opacity:0;}
+}
+
+@keyframes slidein {
+  0% { margin-left:-800px; }
+  20% { margin-left:-800px; }
+  35% { margin-left:0px; }
+  100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+  0% {opacity:0;width:0px;}
+  20% {opacity:1;width:0px;}
+  30% {width:360px;}
+  80% {opacity:1;}
+  100% {opacity:0;width:360px;}
+}
+
+
+p {
+font-size:12px;
+color:#000;
+margin-top:50px;
+margin-left: 20%;
+margin-right: 20%;
+float:center;
+font-size: 25px;
+}
+
+  </style>
+
+</head>
+<body class="about">
+  <div class="Name2">AMBER</div>
+  <div class="Name2">
+    <span>CHEVANNES</span>
+  </div>
+  <br><br><br>
+  <img class="head" src="Headshot_crop.jpg" width=300px>
+    <p>
+    Amber Chevannes researches Computational Approaches for analyzing Biological data at Brown University in the hopes of developing techniques to solve health-related issues.
+    She strongly believes in making the STEM fields more accessible for women of color and has previously worked with a nonprofit to teach coding skills to girls in cities across the country.
+    She is actively to searching for a position in Technology with a focus on Health and Biology applications.
+  </p>
+
+</body>
