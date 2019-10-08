@@ -12,7 +12,7 @@
     }
     .parallax-container {
       width:840px;
-      height: 1000px;
+      height: 500px;
     }
     #myVideo {
       position: fixed;
@@ -24,15 +24,19 @@
       bottom: 0;
       min-width: 100%;
       min-height: 100%;
+      opacity: 0;
     }
-    .content {
+    .VRcontent {
       color: #F6F6F6;
       font-family: 'Ubuntu', sans-serif;
       font-size: 20px;
       line-height: 1.45;
     }
     .vr {
-      color: #B5B5B5;
+      color:  #F0B880;
+      -webkit-animation: fadeInTitle ease 2s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
     }
     @keyframes fadeInBackground {
       from {
@@ -43,39 +47,27 @@
 
        }
     }
+    @keyframes fadeInTitle {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 0.7;
+
+       }
+    }
 
   </style>
 </head>
 <body class="virtual">
-  <script>
-    var e = document.getElementById("myVideo");
-    e.style.opacity = 0;
 
-    var vid = document.getElementById("myVideo");
-    vid.oncanplaythrough = function() {
-      setTimeout(function() {
-          var e = document.getElementById('myVideo');
-          fade(e);
-      }, 5000);
-    };
-
-    function fade(element) {
-      var op = 0;
-      var timer = setInterval(function() {
-          if (op >= 1) clearInterval(timer);
-          element.style.opacity = op;
-          element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-          op += op * 0.1 || 0.1;
-      }, 50);
-    }
-  </script>
 <div class="parallax-container">
   <video autoplay muted loop id="myVideo" width="840" height="1000">
     <source src="3D_screencapture.mp4" type="video/mp4">
   </video>
 </div>
-  <div class="content">
-    <h1 class="vr"> Cappilary Vessel Visualization </h1>
+  <div class="VRcontent">
+    <h1 class="vr"> 3D Cappilary Vessels<br> in VR </h1>
     <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula pulvinar erat id lobortis. Mauris sodales vel nulla sit amet dapibus. Duis luctus porttitor leo. Nulla vulputate arcu ut dui dignissim, iaculis posuere augue ultrices. Aenean suscipit sapien in orci venenatis maximus. Donec nisl elit, suscipit quis bibendum vitae, venenatis quis lacus. Suspendisse id dui eget nisi interdum sagittis. Vestibulum a ex erat. Aenean leo elit, viverra quis vulputate vitae, elementum sit amet nibh. Nulla rhoncus quam a justo molestie, ut gravida risus condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris rutrum congue tellus ac ullamcorper. Vivamus nunc augue, interdum id turpis in, commodo condimentum quam.
 
@@ -87,4 +79,26 @@
 
   Ut at pellentesque eros. Suspendisse potenti. Vestibulum vel feugiat enim, nec lacinia felis. Donec convallis bibendum metus eu interdum. Nunc venenatis ligula at ipsum fringilla, nec tempus nisi sagittis. Suspendisse ac placerat turpis. Nulla eu gravida justo, sed vestibulum felis. Quisque ut fringilla eros. Duis euismod maximus arcu, in suscipit risus cursus in. Nulla mattis at felis porta pharetra. Pellentesque sed diam ante. Etiam nec venenatis lectus, vel elementum ex.</p>
 </div>
+<script>
+  /*var e = document.getElementById("myVideo");
+  e.style.opacity = "0";*/
+
+  var vid = document.getElementById("myVideo");
+  vid.oncanplaythrough = function() {
+    setTimeout(function() {
+        var e = document.getElementById('myVideo');
+        fade(e);
+    }, 1000);
+  };
+
+  function fade(element) {
+    var op = 0;
+    var timer = setInterval(function() {
+        if (op >= 1) clearInterval(timer);
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1 || 0.1;
+    }, 50);
+  }
+</script>
 </body>
