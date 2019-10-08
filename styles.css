@@ -256,9 +256,10 @@ hr {
   margin: 2px;
 }
 .description {
+  font-family: 'Ubuntu', sans-serif;
   margin-left: 15px;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .symbols {
   text-align: center;
@@ -273,7 +274,7 @@ svg{
 .fill {
   transition: 1s;
 }
-frames fadeInPaper{
+@keyframes fadeInPaper{
     0% {
         background-color: #F08080;
         text-shadow: none;
@@ -305,4 +306,27 @@ frames fadeInPaper{
 .keyWordB {
   transition: 1s;
     -webkit-text-decoration-skip: ink;
+}
+.projectLink{
+  background-color:#f29696;
+  border: none;
+  transition: 1s;
+}
+.projectHighlight{
+  transition: 1s;
+}
+.fill2{
+  transition: 1s;
+}
+.award{
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  transition: 1s;
+  line-height: 20px;
+}
+.awardHighlightB{
+  transition: 1s;
+}
+.awardHighlightO{
+  transition: 1s;
 }

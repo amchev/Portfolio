@@ -9,6 +9,7 @@
 </head>
 <body class="cv">
   <script>
+  // HIGHLIGHTS THE FIRST SECTION
     function increaseOpacity(){
       var highlightO = document.getElementsByClassName("orange");
       for (var i = 0; i<highlightO.length; i++){
@@ -25,6 +26,7 @@
         highlightList[i].style.background = '#f29696';
       }
     }
+    //  HIGHLIGHTS THE SKILL  AREA
     function highlightSkill(skill){
       var highlightskill =  document.getElementsByClassName(skill);
       for (var i = 0; i < highlightskill.length; i++){
@@ -43,6 +45,7 @@
         levels[i].style.fill = "#A1A1A1";
       }
     }
+    // Underlines the final area
     function increaseExp(){
       var highlightO = document.getElementsByClassName("keyWordO");
       for (var i = 0; i<highlightO.length; i++){
@@ -60,7 +63,12 @@
         highlightB[i].style.textDecorationColor= "hsla(203, 80%, 60%,1)";
 
       }
+      var levels = document.getElementsByClassName("fill2");
+      for (var i = 0; i < levels.length; i++){
+        levels[i].style.fill = "#33B2FF";
+      }
     }
+
     function decreaseExp(){
         var highlightList = document.getElementsByClassName("keyWordO");
         for (var i = 0; i<highlightList.length;i++){
@@ -71,7 +79,63 @@
         for (var i = 0; i <highlightList.length; i++){
             highlightList[i].style.textDecoration = "none";
         }
+        var levels = document.getElementsByClassName("fill2");
+        for (var i = 0; i < levels.length; i++){
+          levels[i].style.fill = "#A1A1A1";
+        }
     }
+    // Highlight progect area
+    function lightProject(){
+      var highlightB = document.getElementsByClassName("projectHighlight");
+      for (var i = 0; i<highlightB.length; i++){
+        highlightB[i].style.background = "hsla(203, 80%, 60%,0.7)";
+      }
+      var project = document.getElementsByClassName("projectLink");
+      for (var i = 0; i<project.length; i++){
+        project[i].style.background = "hsla(11, 80%, 60%,0.7)";
+      }
+    }
+    function darkProject(){
+      var levels = document.getElementsByClassName("projectHighlight");
+      for (var i = 0; i < levels.length; i++){
+        levels[i].style.background = "#f29696";
+      }
+      var project = document.getElementsByClassName("projectLink");
+      for (var i = 0; i<project.length; i++){
+        project[i].style.background = "#f29696";
+      }
+    }
+
+    function lightAward(){
+      var highlightO = document.getElementsByClassName("awardHighlightO");
+      for (var i = 0; i<highlightO.length; i++){
+        //highlightO[i].style.background = "hsla(11, 80%, 60%,0.7)";
+        highlightO[i].style.textDecoration = "underline";
+        highlightO[i].style.textDecorationStyle =  "double";
+        highlightO[i].style.textDecorationColor= "hsla(11, 80%, 60%,1)";
+
+      }
+      var highlightB = document.getElementsByClassName("awardHighlightB");
+      for (var i = 0; i<highlightB.length; i++){
+        //highlightB[i].style.background = "hsla(11, 80%, 60%,0.7)";
+        highlightB[i].style.textDecoration = "underline";
+        highlightB[i].style.textDecorationStyle =  "double";
+        highlightB[i].style.textDecorationColor= "hsla(203, 80%, 60%,1)";
+
+      }
+    }
+    function darkAward(){
+      var highlightList = document.getElementsByClassName("awardHighlightO");
+      for (var i = 0; i<highlightList.length;i++){
+        //highlightList[i].style.background = '#f29696';
+        highlightList[i].style.textDecoration = "none";
+      }
+      highlightList = document.getElementsByClassName("awardHighlightB");
+      for (var i = 0; i <highlightList.length; i++){
+          highlightList[i].style.textDecoration = "none";
+      }
+    }
+
   </script>
   <div id="space">
   </div>
@@ -98,9 +162,15 @@
           <br class= "small">
           <p> Brown University MPPB Department, Dr. Nicolas Fawzi's Laboratory </p>
           <p> <strong> Thesis Project: </strong> <span class="highlight blue"> Computational</span> Methods for Evaluating <span class="highlight blue">FUS Protein</span> Mutation Pathology  </p>
-          <p class="description"> There are a number of mutations within FUS that have been linked to disease, but the mechanism of the FUS protein’s involvement in disease development, as well as the abundance of the genetic familial studies, casts doubt on many of these mutations.
-            Specifically, a number of point mutations and point deletions have been identified through genetic surveys.
-            The lack of familial genetic information as well as the unstructured nature of the FUS protein leaves the pertinence of mutations undetermined. “Human pathogenic amino acid substitutions tend to occur at less variable sites of proteins. [7]” This project focused on creating a model extrapolated from this evolutionary idea where identifying areas of low evolutionaryvariation, can identify human pathogenic substitions. </p>
+          <p class="description"> The FUS protein or Fused in Sarcoma protein, is an RNA binding protein that regulates various
+            translation and transcription processes. A number of mutations within the FUS protein
+            have been linked clinically to the development of <span class="highlight blue">ALS</span>, a debilitating neurdegenerative disease.
+            Following standard evolutionary assumptions, we can extrapolate that <span class="highlight blue">less evolutionary variable sites within proteins</span> correspond to
+            amino acid locations <span class="highlight blue">critical for normal protein function</span> within the body.
+            This thesis project focused on <span class="highlight blue">creating a statistical model</span> extrapolated from this basic evolutionary principle. By
+            identifying areas of low evolutionary variation, we were able to <span class="highlight blue">classify clinically identified mutations</span> as pathogenic or non-pathogenic.
+            Using <span class="highlight blue">python data analysis packages</span> and a <span class="highlight blue">web based D3 visualization library</span>, this project resulted in both <span class="highlight blue">visual and mathematical models</span> for the
+            FUS protein's genetic involvement in ALS on an individual amino acid scale  </p>
       <br class="small">
 
           <span class="inlineleft">
@@ -268,13 +338,13 @@
        <p> Brown University Computer Science Department </p>
    </div>
      <p class="description"> <svg height="10" width="10">
-       <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+       <circle class="fill2" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
      </svg> <span class = "keyWordO"> Evaluate</span>, <span class = "keyWordO">Build</span> and <span class = "keyWordO">Test</span> <span class = "keyWordO">software tools</span> available for scientific <span class = "keyWordO">VR</span> applications. <br>
      <svg height="10" width="10">
-       <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+       <circle class="fill2" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
      </svg> <span class = "keyWordO">Create immersive VR experiences</span> for biomedical scientists to do complex visual analysis of <span class = "keyWordO">research data</span>. <br>
      <svg height="10" width="10">
-       <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+       <circle class="fill2" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
      </svg> <span class = "keyWordO">Collaborate</span> with multiple research teams across the university to investigate VR as an avenue for <span class = "keyWordO">data analysis</span>.</p>
      <div class="skill">
 
@@ -283,31 +353,27 @@
        <p>  </p>
     </div>
      <p class="description">  <svg height="10" width="10">
-       <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+       <circle class="fill2" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
      </svg> Prepare and deliver lessons in Scratch, <span class = "keyWordB"> Python</span>, <span class = "keyWordB">Arduino C</span>, <span class = "keyWordB">HTML, CSS, and JS</span> for 20 high school girls.<br>
      <svg height="10" width="10">
-      <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+      <circle class="fill2" cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
     </svg> <span class = "keyWordB">Manage</span> 2 Teaching Assistants by providing them with tools CS instruction and setting up daily meetings.<br>
-    <svg height="10" width="10">
-      <circle cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
+    <svg  height="10" width="10">
+      <circle class="fill2"  cx="5" cy="5" r="4" stroke="black" stroke-width="1" fill=#A1A1A1>
     </svg> Act as a <span class = "keyWordB">liaison to AT&T</span> employees and executive guests.<br></p>
 
    </div>
    <hr>
-   <div class="section">
+   <div class="section" onmouseover="lightProject();" onmouseout="darkProject();">
    <div class="sectTitle" align="left"> PROJECTS </div>
-  <p class="description"> Center for Computation & Visualization, Brown University, <span class="blink">Develop 3D vessel map of engineered cardiac grafts</span> for an immersive VR Theater for investigation of biomaterial vascularization.</p>
-   School of Engineering, Brown University, Improve open source 3D game engine for realistic jellyfish movement utilizing scientific computing techniques and animal movement modeling research.
+   <p class="skill"> Center for Computation & Visualization <b>@</b> Brown University <button class="projectLink inlineright" onclick="window.location.href = 'VR.html';">EXPLORE 3D Vessel Map in VR </button></p> <p class="description"> <span class ="projectHighlight"> <b>Develop 3D vessel map</b></span> of engineered cardiac grafts for an immersive VR Theater in order to investigate of biomaterial vascularization.</p>
+   <p class="skill"> School of Engineering @ Brown University</b><button class="projectLink inlineright" onclick="window.location.href = 'VR.html';">EXPLORE Jellyfish 3D Animation </button></p><p class="description"> <span class ="projectHighlight"><b>Improve open source 3D game engine</b></span> for realistic jellyfish movement utilizing scientific computing techniques and animal movement modeling research.</p>
   </div>
   <hr>
-  <div class="section">
+  <div class="section" onmouseover="lightAward();"onmouseout="darkAward();">
     <div class ="sectTitle" align="left"> AWARDS & FELLOWSHIPS </div>
-    AAUW Selected Professions Fellow 2017, awarded by the American Association of University Women for professional promise in the field of STEM.
-  Presidential Scholars Program Graduate Fellow 2018, academic and research mentor to undergraduate students in STEM fields.
+    <p  class="award"> <span class="awardHighlightB">AAUW Selected Professions Fellow 2017,</span> <em> awarded by the American Association of University Women for professional promise in the field of STEM. </em></p>
+    <p class="award"> <span class="awardHighlightO">Presidential Scholars Program Graduate Fellow 2018,</span> <em> academic and research mentor to undergraduate students in STEM fields. </em></p>
   </div>
-  <div class="section">
-    <div class="sectTitle" align="left">
 
- </div id="content">
-</div>
 </body>
