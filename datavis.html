@@ -1,0 +1,712 @@
+  <!DOCTYPE html>
+  <meta charset="utf-8">
+  <head>
+  <style>
+  path {
+    stroke: #fff;
+    fill-rule: evenodd;
+  }
+  body {
+    background-color: #F4F4F4;
+    position: relative;
+  }
+  svg {
+    position: relative;
+    left: 200px;
+  }
+  h1 {
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    color:	#C0C0C0;
+    opacity: 0.3;
+    font-size: 80px;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+  }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">d
+  </head>
+  <body>
+    <h1> SPATIAL FUS MAMMAL VARIATION </h1>
+    <svg id="svg"> </svg>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Poppins|Sarabun" rel="stylesheet">
+  <script>
+  var data = {
+      "name": "PROTEIN", "children": [{"name": "QGSY Rich Region", "children":[{"name": "M1", "size":5},
+  {"name": "A2", "size":6},
+  {"name": "S3", "size":8},
+  {"name": "N4", "size":7},
+  {"name": "D5", "size":5},
+  {"name": "Y6", "size": 1},
+  {"name": "T7", "size": 4},
+  {"name": "Q8", "size": 1},
+  {"name": "Q9", "size": 1},
+  {"name": "A10", "size": 1},
+  {"name": "T11", "size": 1},
+  {"name": "Q12", "size": 1 },
+  {"name": "S13", "size": 1 },
+  {"name": "Y14", "size": 1 },
+  {"name": "G15", "size": 1 },
+  {"name": "A16", "size": 2 },
+  {"name": "Y17", "size": 1 },
+  {"name": "P18",  "children":[{"name": "P18S", "size": 2 }]},
+  {"name": "T19", "size": 2 },
+  {"name": "Q20", "size": 1 },
+  {"name": "P21", "size": 1 },
+  {"name": "G22", "size": 1 },
+  {"name": "Q23", "size": 1 },
+  {"name": "G24", "size": 1 },
+  {"name": "Y25", "size": 1 },
+  {"name": "S26", "size": 1},
+  {"name": "Q27", "size": 1 },
+  {"name": "Q28", "size": 1 },
+  {"name": "S29", "size": 2},
+  {"name": "S30", "size": 27},
+  {"name": "Q31", "size": 1 },
+  {"name": "P32", "size": 1 },
+  {"name": "Y33", "size": 1 },
+  {"name": "G34", "size": 1 },
+  {"name": "Q35", "size": 1 },
+  {"name": "Q36", "size": 1 },
+  {"name": "S37", "size": 2},
+  {"name": "Y38", "size": 2},
+  {"name": "S39", "size": 14},
+  {"name": "G40", "size": 4},
+  {"name": "Y41", "size": 2},
+  {"name": "S42", "size": 46},
+  {"name": "Q43", "size": 3},
+  {"name": "S44", "size": 2},
+  {"name": "T45", "size": 37},
+  {"name": "D46", "size": 2},
+  {"name": "T47", "size": 5},
+  {"name": "S48", "size": 4},
+  {"name": "G49", "size": 5},
+  {"name": "Y50", "size": 2},
+  {"name": "G51", "size": 2},
+  {"name": "Q52", "size": 2},
+  {"name": "S53", "size": 2},
+  {"name": "S54", "size": 7},
+  {"name": "Y55", "size": 2},
+  {"name": "S56", "size": 15},
+  {"name": "S57", "children":[{"name": "S57-", "size": 2 }]},
+  {"name": "Y58", "size": 2},
+  {"name": "G59", "size": 2},
+  {"name": "Q60", "size": 2},
+  {"name": "S61", "size": 52},
+  {"name": "Q62", "size": 2},
+  {"name": "N63", "size": 10},
+  {"name": "T64", "size": 9},
+  {"name": "G65", "size": 1},
+  {"name": "Y66", "size": 1},
+  {"name": "G67", "size": 11},
+  {"name": "T68", "size": 4},
+  {"name": "Q69", "size": 2},
+  {"name": "S70", "size": 4},
+  {"name": "T71", "size": 55},
+  {"name": "P72", "size": 1 },
+  {"name": "Q73", "size": 1 },
+  {"name": "G74", "size": 1 },
+  {"name": "Y75", "size": 1 },
+  {"name": "G76", "size": 2},
+  {"name": "S77", "size": 1 },
+  {"name": "T78", "size": 21},
+  {"name": "G79", "size": 14},
+  {"name": "G80", "size": 2},
+  {"name": "Y81", "size": 1},
+  {"name": "G82", "size": 5},
+  {"name": "S83", "size": 10},
+  {"name": "S84", "size": 10},
+  {"name": "Q85", "size": 2},
+  {"name": "S86", "size": 8},
+  {"name": "S87", "size": 3},
+  {"name": "Q88", "size": 2},
+  {"name": "S89", "size": 4},
+  {"name": "S90", "size": 2},
+  {"name": "Y91", "size": 2},
+  {"name": "G92", "size": 2},
+  {"name": "Q93", "size": 2},
+  {"name": "Q94", "size": 1 },
+  {"name": "S95", "size": 1 },
+  {"name": "S96", "children":[{"name": "S96-", "size": 2 }]},
+  {"name": "Y97", "size": 2},
+  {"name": "P98", "size": 1 },
+  {"name": "G99", "size": 2},
+  {"name": "Y100", "size": 2},
+  {"name": "G101", "size": 4},
+  {"name": "Q102", "size": 2},
+  {"name": "Q103", "size": 2},
+  {"name": "P104", "size": 2},
+  {"name": "A105", "size": 12},
+  {"name": "P106", "children":[{"name": "P106L", "size": 2 }]},
+  {"name": "S107", "size": 1 },
+  {"name": "S108", "size": 2},
+  {"name": "T109", "size": 3},
+  {"name": "S110", "size": 2},
+  {"name": "G111", "size": 1 },
+  {"name": "S112", "size": 1},
+  {"name": "Y113", "size": 1 },
+  {"name": "G114", "size": 6},
+  {"name": "S115", "children":[{"name": "S115N", "size": 15 }]},
+  {"name": "S116", "size": 10},
+  {"name": "S117", "size": 3},
+  {"name": "Q118", "size": 1 },
+  {"name": "S119", "size": 11},
+  {"name": "S120", "size": 1 },
+  {"name": "S121", "size": 26},
+  {"name": "Y122", "size": 1 },
+  {"name": "G123", "size": 1 },
+  {"name": "Q124", "size": 2},
+  {"name": "P125", "size": 1 },
+  {"name": "Q126", "size": 18},
+  {"name": "S127", "size": 10},
+  {"name": "G128", "size": 2},
+  {"name": "S129", "size": 60},
+  {"name": "Y130", "size": 1 },
+  {"name": "S131", "size": 62},
+  {"name": "Q132", "size": 2},
+  {"name": "Q133", "size": 1 },
+  {"name": "P134", "size": 53},
+  {"name": "S135", "size": 51},
+  {"name": "Y136", "size": 1 },
+  {"name": "G137", "size": 8},
+  {"name": "G138", "size": 2},
+  {"name": "Q139", "size": 1 },
+  {"name": "Q140", "size": 2},
+  {"name": "Q141", "size": 15},
+  {"name": "S142", "size": 15},
+  {"name": "Y143", "size": 1 },
+  {"name": "G144", "size": 1 },
+  {"name": "Q145", "size": 2},
+  {"name": "Q146", "size": 1 },
+  {"name": "Q147", "size": 3},
+  {"name": "S148", "size": 1 },
+  {"name": "Y149", "size": 2},
+  {"name": "N150", "size": 2},
+  {"name": "P151", "size": 4},
+  {"name": "P152", "size": 1 },
+  {"name": "Q153", "size": 1 },
+  {"name": "G154", "size": 2},
+  {"name": "Y155", "size": 2},
+  {"name": "G156", "children":[{"name": "G156E", "size": 2 }]},
+  {"name": "Q157", "size": 1 },
+  {"name": "Q158", "size": 1 },
+  {"name": "N159", "size": 8},
+  {"name": "Q160", "size": 1 },
+  {"name": "Y161", "size": 2},
+  {"name": "N162", "size": 2},
+  {"name": "S163", "size": 2},
+  {"name": "S164", "size": 2},
+  {"name": "S165", "size": 4},
+  ]},{"name": "G Rich Region", "children":[{"name": "G166", "size": 3},
+  {"name": "G167", "size": 2},
+  {"name": "G168", "size": 1 },
+  {"name": "G169", "size": 10},
+  {"name": "G170", "size": 2},
+  {"name": "G171", "size": 11},
+  {"name": "G172", "size": 4},
+  {"name": "G173", "size": 5},
+  {"name": "G174", "size": 4},
+  {"name": "G175", "size": 2},
+  {"name": "N176", "size": 28},
+  {"name": "Y177", "size": 1 },
+  {"name": "G178", "children":[{"name": "G178H", "size": 1 }]},
+  {"name": "Q179", "size": 1 },
+  {"name": "D180", "size": 2},
+  {"name": "Q181", "size": 1 },
+  {"name": "S182", "size": 10},
+  {"name": "S183", "size": 5},
+  {"name": "M184", "size": 3},
+  {"name": "S185", "size": 1 },
+  {"name": "S186", "size": 14},
+  {"name": "G187", "children":[{"name": "G187S", "size": 5 }]},
+  {"name": "G188", "size": 6},
+  {"name": "G189", "size": 6},
+  {"name": "S190", "size": 35},
+  {"name": "G191", "children":[{"name": "G191S", "size": 3 }]},
+  {"name": "G192", "size": 1 },
+  {"name": "G193", "size": 3},
+  {"name": "Y194", "size": 3},
+  {"name": "G195", "size": 1 },
+  {"name": "N196", "size": 12},
+  {"name": "Q197", "size": 4},
+  {"name": "D198", "size": 3},
+  {"name": "Q199", "size": 2},
+  {"name": "S200", "size": 2},
+  {"name": "G201", "size": 4},
+  {"name": "G202", "size": 4},
+  {"name": "G203", "size": 4},
+  {"name": "G204", "size": 10},
+  {"name": "S205", "size": 39},
+  {"name": "G206", "children":[{"name": "G206S", "size": 13 }]},
+  {"name": "G207", "size": 5},
+  {"name": "Y208", "size": 28},
+  {"name": "G209", "size": 1 },
+  {"name": "Q210", "size": 2},
+  {"name": "Q211", "size": 2},
+  {"name": "D212", "size": 2},
+  {"name": "R213", "size": 2},
+  {"name": "G214", "size": 2},
+  {"name": "G215", "size": 2},
+  {"name": "R216", "children":[{"name": "R216C", "size": 2 }]},
+  {"name": "G217", "size": 2},
+  {"name": "R218", "size": 1},
+  {"name": "G219", "size": 1 },
+  {"name": "G220", "size": 1 },
+  {"name": "S221", "size": 5},
+  {"name": "G222", "size": 2},
+  {"name": "G223", "size": 7},
+  {"name": "G224", "size": 1},
+  {"name": "G225", "children":[{"name": "G225V", "size": 2 }]},
+  {"name": "G226", "size": 3},
+  {"name": "G227", "size": 2},
+  {"name": "G228", "size": 3},
+  {"name": "G229", "size": 3},
+  {"name": "G230", "children":[{"name": "G230C", "size": 2 }]},
+  {"name": "G231", "size": 2},
+  {"name": "Y232", "size": 1},
+  {"name": "N233", "size": 5},
+  {"name": "R234", "children":[{"name": "R234L", "size": 2 }]},
+  {"name": "S235", "size": 3},
+  {"name": "S236", "size": 6},
+  {"name": "G237", "size": 2},
+  {"name": "G238", "size": 2},
+  {"name": "Y239", "size": 2},
+  {"name": "E240", "size": 2},
+  {"name": "P241", "size": 1 },
+  {"name": "R242", "size": 2},
+  {"name": "G243", "size": 2},
+  {"name": "R244", "children":[{"name": "R244L, R244C", "size": 2 }]},
+  {"name": "G245", "size": 2},
+  {"name": "G246", "size": 3},
+  {"name": "G247", "size": 2},
+  {"name": "R248", "size": 2},
+  {"name": "G249", "size": 1 },
+  {"name": "G250", "size": 3},
+  {"name": "R251", "size": 2},
+  {"name": "G252", "size": 2},
+  {"name": "G253", "size": 2},
+  {"name": "M254", "children":[{"name": "M254V", "size": 2 }]},
+  {"name": "G255", "size": 2},
+  {"name": "G256", "size": 1 },
+  {"name": "S257", "size": 1},
+  {"name": "D258", "size": 1 },
+  {"name": "R259", "size": 1},
+  {"name": "G260", "size": 1 },
+  {"name": "G261", "size": 1 },
+  {"name": "F262", "size": 1 },
+  {"name": "N263", "size": 1 },
+  {"name": "K264", "size": 1},
+  {"name": "F265", "size": 1 },
+  {"name": "G266", "size": 1 },
+  ]},{"name": "NONE", "children":[{"name": "G267", "size": 1 },
+  {"name": "P268", "size": 2},
+  {"name": "R269", "size": 1},
+  {"name": "D270", "size": 1 },
+  {"name": "Q271", "size": 1 },
+  {"name": "G272", "size": 1 },
+  {"name": "S273", "size": 2},
+  {"name": "R274", "size": 2},
+  {"name": "H275", "size": 1 },
+  {"name": "D276", "size": 1 },
+  {"name": "S277", "size": 3},
+  {"name": "E278", "size": 1 },
+  {"name": "Q279", "size": 1 },
+  {"name": "D280", "size": 1 },
+  {"name": "N281", "size": 1 },
+  {"name": "S282", "size": 1 },
+  {"name": "D283", "size": 1 },
+  {"name": "N284", "size": 1 },
+  {"name": "N285", "size": 2},
+  ]},{"name": "RNA Recognition Motif", "children":[{"name": "T286", "size": 1},
+  {"name": "I287", "size": 2},
+  {"name": "F288", "size": 2},
+  {"name": "V289", "size": 1 },
+  {"name": "Q290", "children":[{"name": "Q290STOP", "size": 1 }]},
+  {"name": "G291", "size": 3},
+  {"name": "L292", "size": 1 },
+  {"name": "G293", "size": 1 },
+  {"name": "E294", "size": 1 },
+  {"name": "N295", "size": 1 },
+  {"name": "V296", "size": 1 },
+  {"name": "T297", "size": 1 },
+  {"name": "I298", "size": 1 },
+  {"name": "E299", "size": 1 },
+  {"name": "S300", "size": 1 },
+  {"name": "V301", "size": 1 },
+  {"name": "A302", "size": 1 },
+  {"name": "D303", "size": 1 },
+  {"name": "Y304", "size": 1 },
+  {"name": "F305", "size": 1 },
+  {"name": "K306", "size": 1 },
+  {"name": "Q307", "size": 2},
+  {"name": "I308", "size": 2},
+  {"name": "G309", "size": 1 },
+  {"name": "I310", "size": 1 },
+  {"name": "I311", "size": 1 },
+  {"name": "K312", "size": 1 },
+  {"name": "T313", "size": 1 },
+  {"name": "N314", "size": 1 },
+  {"name": "K315", "size": 1 },
+  {"name": "K316", "size": 1},
+  {"name": "T317", "size": 1},
+  {"name": "G318", "size": 1 },
+  {"name": "Q319", "size": 1 },
+  {"name": "P320", "size": 1 },
+  {"name": "M321", "size": 1 },
+  {"name": "I322", "size": 1 },
+  {"name": "N323", "size": 2},
+  {"name": "L324", "size": 1 },
+  {"name": "Y325", "size": 1},
+  {"name": "T326", "size": 1},
+  {"name": "D327", "size": 1 },
+  {"name": "R328", "size": 1 },
+  {"name": "E329", "size": 2},
+  {"name": "T330", "size": 1 },
+  {"name": "G331", "size": 1 },
+  {"name": "K332", "size": 1},
+  {"name": "L333", "size": 1 },
+  {"name": "K334", "size": 1},
+  {"name": "G335", "size": 1 },
+  {"name": "E336", "size": 1 },
+  {"name": "A337", "size": 1 },
+  {"name": "T338", "size": 1 },
+  {"name": "V339", "size": 2},
+  {"name": "S340", "size": 1},
+  {"name": "F341", "size": 2},
+  {"name": "D342", "size": 2},
+  {"name": "D343", "size": 2},
+  {"name": "P344", "size": 1 },
+  {"name": "P345", "size": 2},
+  {"name": "S346", "size": 2},
+  {"name": "A347", "size": 2},
+  {"name": "K348", "size": 2},
+  {"name": "A349", "size": 2},
+  {"name": "A350", "size": 2},
+  {"name": "I351", "size": 3},
+  {"name": "D352", "size": 2},
+  {"name": "W353", "size": 2},
+  {"name": "F354", "size": 2},
+  {"name": "D355", "size": 1},
+  {"name": "G356", "size": 2},
+  {"name": "K357", "size": 1},
+  {"name": "E358", "size": 1 },
+  {"name": "F359", "size": 1 },
+  {"name": "S360", "size": 2},
+  {"name": "G361", "size": 1 },
+  {"name": "N362", "size": 1 },
+  {"name": "P363", "size": 2},
+  {"name": "I364", "size": 1 },
+  {"name": "K365", "size": 2},
+  {"name": "V366", "size": 2},
+  {"name": "S367", "size": 1 },
+  {"name": "F368", "size": 1 },
+  {"name": "A369", "size": 1 },
+  {"name": "T370", "size": 1 },
+  {"name": "R371", "size": 1},
+  ]},{"name": "RGG Rich Domain", "children":[{"name": "R372", "size": 1 },
+  {"name": "A373", "size": 1 },
+  {"name": "D374", "size": 1 },
+  {"name": "F375", "size": 1 },
+  {"name": "N376", "size": 1 },
+  {"name": "R377", "children":[{"name": "R377W", "size": 1 }]},
+  {"name": "G378", "size": 1 },
+  {"name": "G379", "size": 1 },
+  {"name": "G380", "size": 1 },
+  {"name": "N381", "size": 1 },
+  {"name": "G382", "size": 1 },
+  {"name": "R383", "size": 1 },
+  {"name": "G384", "size": 1 },
+  {"name": "G385", "size": 1 },
+  {"name": "R386", "size": 1 },
+  {"name": "G387", "size": 1 },
+  {"name": "R388", "size": 2},
+  {"name": "G389", "size": 1 },
+  {"name": "G390", "size": 1 },
+  {"name": "P391", "size": 3},
+  {"name": "M392", "children":[{"name": "M392I", "size": 3 }]},
+  {"name": "G393", "size": 3},
+  {"name": "R394", "size": 3},
+  {"name": "G395", "size": 1 },
+  {"name": "G396", "size": 2},
+  {"name": "Y397", "size": 5},
+  {"name": "G398", "size": 3},
+  {"name": "G399", "children":[{"name": "G399V", "size": 1 }]},
+  {"name": "G400", "size": 3},
+  {"name": "G401", "size": 2},
+  {"name": "S402", "size": 6},
+  {"name": "G403", "size": 3},
+  {"name": "G404", "size": 3},
+  {"name": "G405", "size": 10},
+  {"name": "G406", "size": 5},
+  {"name": "R407", "size": 3},
+  {"name": "G408", "size": 2},
+  {"name": "G409", "size": 3},
+  {"name": "F410", "size": 3},
+  {"name": "P411", "size": 3},
+  {"name": "S412", "size": 3},
+  {"name": "G413", "size": 2},
+  {"name": "G414", "size": 3},
+  {"name": "G415", "size": 2},
+  {"name": "G416", "size": 2},
+  {"name": "G417", "size": 3},
+  {"name": "G418", "size": 2},
+  {"name": "G419", "size": 2},
+  {"name": "Q420", "size": 1 },
+  {"name": "Q421", "size": 1 },
+  {"name": "R422", "size": 1 },
+  ]},{"name": "Zinc Finger Domain", "children":[{"name": "A423", "size": 1 },
+  {"name": "G424", "size": 1 },
+  {"name": "D425", "size": 1 },
+  {"name": "W426", "size": 1 },
+  {"name": "K427", "size": 1 },
+  {"name": "C428", "size": 1 },
+  {"name": "P429", "size": 1 },
+  {"name": "N430", "size": 1 },
+  {"name": "P431", "children":[{"name": "P431L", "size": 2 }]},
+  {"name": "T432", "size": 8},
+  {"name": "C433", "size": 1 },
+  {"name": "E434", "size": 1 },
+  {"name": "N435", "size": 1 },
+  {"name": "M436", "size": 1 },
+  {"name": "N437", "size": 2},
+  {"name": "F438", "size": 2},
+  {"name": "S439", "size": 1},
+  {"name": "W440", "size": 1 },
+  {"name": "R441", "size": 1 },
+  {"name": "N442", "size": 2},
+  {"name": "E443", "size": 1 },
+  {"name": "C444", "size": 1 },
+  {"name": "N445", "size": 1 },
+  {"name": "Q446", "size": 1 },
+  {"name": "C447", "size": 1 },
+  {"name": "K448", "size": 1},
+  {"name": "A449", "size": 1 },
+  {"name": "P450", "size": 1 },
+  {"name": "K451", "size": 1 },
+  {"name": "P452", "size": 1 },
+  {"name": "D453", "size": 2},
+  ]},{"name": "RGG Rich Domain", "children":[{"name": "G454", "size": 1 },
+  {"name": "P455", "size": 1 },
+  {"name": "G456", "size": 1 },
+  {"name": "G457", "size": 1 },
+  {"name": "G458", "size": 1 },
+  {"name": "P459", "size": 1 },
+  {"name": "G460", "size": 1 },
+  {"name": "G461", "size": 1 },
+  {"name": "S462", "children":[{"name": "S462F", "size": 1 }]},
+  {"name": "H463", "size": 1 },
+  {"name": "M464", "children":[{"name": "M464I", "size": 1 }]},
+  {"name": "G465", "size": 1 },
+  {"name": "G466", "size": 2},
+  {"name": "N467", "size": 8},
+  {"name": "Y468", "size": 4},
+  {"name": "G469", "size": 1 },
+  {"name": "D470", "size": 2},
+  {"name": "D471", "size": 2},
+  {"name": "R472", "size": 2},
+  {"name": "R473", "size": 2},
+  {"name": "G474", "size": 1 },
+  {"name": "G475", "size": 1 },
+  {"name": "R476", "size": 2 },
+  {"name": "G477", "size": 1 },
+  {"name": "G478", "size": 1 },
+  {"name": "Y479", "size": 1 },
+  {"name": "D480", "size": 2},
+  {"name": "R481", "size": 2},
+  {"name": "G482", "size": 1 },
+  {"name": "G483", "size": 1 },
+  {"name": "Y484", "size": 1 },
+  {"name": "R485", "children":[{"name": "R485W", "size": 1 }]},
+  {"name": "G486", "size": 1 },
+  {"name": "R487", "children":[{"name": "R487C", "size": 1 }]},
+  {"name": "G488", "size": 1 },
+  {"name": "G489", "size": 1 },
+  {"name": "D490", "size": 2},
+  {"name": "R491", "size": 2},
+  {"name": "G492", "size": 1 },
+  {"name": "G493", "size": 1 },
+  {"name": "F494", "size": 2},
+  {"name": "R495", "children":[{"name": "R495STOP", "size": 1 }]},
+  {"name": "G496", "size": 1 },
+  {"name": "G497", "size": 1 },
+  {"name": "R498", "size": 1},
+  {"name": "G499", "size": 1 },
+  {"name": "G500", "size": 1 },
+  ]},{"name": "NONE", "children":[{"name": "G501", "size": 1 },
+  {"name": "D502", "size": 1 },
+  {"name": "R503", "size": 2},
+  {"name": "G504", "size": 1 },
+  {"name": "G505", "size": 1 },
+  {"name": "F506", "size": 1 },
+  {"name": "G507", "children":[{"name": "G507D", "size": 1 }]},
+  {"name": "P508", "size": 1 },
+  {"name": "G509", "size": 1 },
+  {"name": "K510", "children":[{"name": "K510R, K510M, K510G", "size": 1 }]},
+  ]},{"name": "Nuclear Location Signal", "children":[{"name": "M511", "size": 1 },
+  {"name": "D512", "size": 1 },
+  {"name": "S513", "children":[{"name": "S513P", "size": 1 }]},
+  {"name": "R514", "children":[{"name": "R514S, R514G", "size": 3 }]},
+  {"name": "G515", "size": 1 },
+  {"name": "E516", "size": 7},
+  {"name": "H517", "children":[{"name": "H517Q, H517P, H517D", "size": 1 }]},
+  {"name": "R518", "children":[{"name": "R518K", "size": 2 }]},
+  {"name": "Q519", "children":[{"name": "Q519STOP", "size": 2 }]},
+  {"name": "D520", "size": 1 },
+  {"name": "R521", "children":[{"name": "R521S, R521C", "size": 1 }]},
+  {"name": "R522", "children":[{"name": "R522G", "size": 2 }]},
+  {"name": "E523", "size": 1 },
+  {"name": "R524", "children":[{"name": "R524T", "size": 2 }]},
+  {"name": "P525", "children":[{"name": "P525L", "size": 2 }]},
+  {"name": "Y526", "size": 1}]
+  }]};
+  var partition = data => {
+    const root = d3.hierarchy(data)
+        .sum(d => d.size);
+        //.sort((a, b) => b.value - a.value);
+    return  d3.partition()
+        .size([2 * Math.PI, root.height + 1])
+      (root);
+  };
+   var color = d3.scaleOrdinal().range(d3.schemeCategory20);
+  var format = d3.format(",d");
+  var width = 974;
+  var radius = width / 6;
+  var arc = d3.arc()
+      .startAngle(d => d.x0)
+      .endAngle(d => d.x1)
+      .padAngle(d => Math.min((d.x1 - d.x0) / 2, 0.005))
+      .padRadius(radius * 1.5)
+      .innerRadius(d => d.y0 * radius)
+      .outerRadius(d => Math.max(d.y0 * radius, d.y1 * radius - 1));
+  //var d3 = require("d3@5");
+  const root = partition(data);
+   root.each(d => d.current = d);
+  const svg = d3.select(document.getElementById("svg"))
+       .style("width", "100%")
+       .style("height", "1500px")
+       .style("position", "center")
+       .style("font", "10px sans-serif");
+   const g = svg.append("g")
+       .attr("transform", `translate(${width / 2},${width / 2})`)
+       .on("mouseleave",mouseleave);
+   const path = g.append("g")
+     .selectAll("path")
+     .data(root.descendants().slice(1))
+     .enter().append("path")
+       .attr("fill", d => { while (d.depth > 1) d = d.parent; return color(d.data.name); })
+       .attr("fill-opacity", d => arcVisible(d.current) ? (d.children ? 0.6 : 0.4) : 0)
+       .attr("d", d => arc(d.current))
+       .on("mouseover",mouseover);
+   path.filter(d => d.children)
+       .style("cursor", "pointer")
+       .on("click", clicked);
+   path.append("title")
+       .text(d => `${d.ancestors().map(d => d.data.name).reverse().join("/")}\n${format(d.value)}`);
+   const label = g.append("g")
+       .attr("pointer-events", "none")
+       .attr("text-anchor", "middle")
+       .style("user-select", "none")
+     .selectAll("text")
+     .data(root.descendants().slice(1))
+     .enter().append("text")
+       .attr("dy", "0.35em")
+       .attr("fill-opacity", d => +labelVisible(d.current))
+       .attr("transform", d => labelTransform(d.current))
+       .text(d => d.data.name);
+   //percentage text
+   const percentage_text=svg.append("text")
+       .attr("id","title")
+       .attr("x", (width / 2))
+         .attr("y", (width / 2))
+         .attr("text-anchor", "middle")
+         .style("font-size", "2.5em");
+   const parent = g.append("circle")
+       .datum(root)
+       .attr("r", radius)
+       .attr("fill", "none")
+       .attr("pointer-events", "all")
+       .on("click", clicked);
+   function clicked(p) {
+     parent.datum(p.parent || root);
+     root.each(d => d.target = {
+       x0: Math.max(0, Math.min(1, (d.x0 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,
+       x1: Math.max(0, Math.min(1, (d.x1 - p.x0) / (p.x1 - p.x0))) * 2 * Math.PI,
+       y0: Math.max(0, d.y0 - p.depth),
+       y1: Math.max(0, d.y1 - p.depth)
+     });
+     const t = g.transition().duration(750);
+     // Transition the data on all arcs, even the ones that aren’t visible,
+     // so that if this transition is interrupted, entering arcs will start
+     // the next transition from the desired position.
+     path.transition(t)
+         .tween("data", d => {
+           const i = d3.interpolate(d.current, d.target);
+           return t => d.current = i(t);
+         })
+       .filter(function(d) {
+         return +this.getAttribute("fill-opacity") || arcVisible(d.target);
+       })
+         .attr("fill-opacity", d => arcVisible(d.target) ? (d.children ? 0.6 : 0.4) : 0)
+         .attrTween("d", d => () => arc(d.current));
+     label.filter(function(d) {
+         return +this.getAttribute("fill-opacity") || labelVisible(d.target);
+       }).transition(t)
+         .attr("fill-opacity", d => +labelVisible(d.target))
+         .attrTween("transform", d => () => labelTransform(d.current));
+   }
+   //mouse over
+   const totalSize = root.descendants()[0].value;
+   function mouseover(d){
+     var percentage = (100 * d.value / totalSize).toPrecision(3);
+       var percentageString = (d.data.name);
+       if (d.descendants().length == 1){
+         percentageString += "  ";
+         percentageString += + d.value-1;
+         percentageString += " ";
+         percentageString += "Mammal(s) w/ Variant";
+       }
+       percentage_text.text(percentageString);
+     var sequenceArray = d.ancestors().reverse();
+     sequenceArray.shift(); // remove root node from the array
+     // Fade all the segments.
+     d3.selectAll("path")
+         .style("opacity", 0.3);
+     // Then highlight only those that are an ancestor of the current segment.
+     g.selectAll("path")
+         .filter(function(node) {
+                   return (sequenceArray.indexOf(node) >= 0);
+                 })
+         .style("opacity", 1);
+   }
+   //mouse leave
+   // Restore everything to full opacity when moving off the visualization.
+     function mouseleave(d) {
+       // Deactivate all segments during transition.
+       //d3.selectAll("path").on("mouseover", null);
+       // Transition each segment to full opacity and then reactivate it.
+       d3.selectAll("path")
+           .transition()
+           .duration(200)
+           .style("opacity", 1)
+           .on("end", function() {
+                   d3.select(this).on("mouseover", mouseover);
+                 });
+       var parent_text = d.ancestors()[0].name;
+       percentage_text.text(parent_text);
+     }
+   function arcVisible(d) {
+     return d.y1 <= 3 && d.y0 >= 1 && d.x1 > d.x0;
+   }
+   function labelVisible(d) {
+     return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.03;
+   }
+   function labelTransform(d) {
+     const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
+     const y = (d.y0 + d.y1) / 2 * radius;
+     return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
+   }
+  d3.select(self.frameElement);
+  </script>
+  </body>
