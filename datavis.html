@@ -12,7 +12,8 @@
   }
   svg {
     position: relative;
-    left: 200px;
+    float: center;
+    padding: 20px;
   }
   h1 {
     text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
@@ -24,7 +25,7 @@
   }
   </style>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">d
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1> SPATIAL FUS MAMMAL VARIATION </h1>
@@ -589,7 +590,8 @@
        .style("position", "center")
        .style("font", "10px sans-serif");
    const g = svg.append("g")
-       .attr("transform", `translate(${width / 2},${width / 2})`)
+       /*.attr("transform", `translate(${width / 2},${width / 2})`)*/
+       .attr("transform", `translate(750,750)`)
        .on("mouseleave",mouseleave);
    const path = g.append("g")
      .selectAll("path")
@@ -618,8 +620,8 @@
    //percentage text
    const percentage_text=svg.append("text")
        .attr("id","title")
-       .attr("x", (width / 2))
-         .attr("y", (width / 2))
+       .attr("x", 750)
+         .attr("y", 750)
          .attr("text-anchor", "middle")
          .style("font-size", "2.5em");
    const parent = g.append("circle")
