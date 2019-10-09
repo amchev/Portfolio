@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Righteous&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     .virtual {
@@ -26,15 +27,20 @@
       min-width: 100%;
       min-height: 100%;
       opacity: 0;
+      z-index: -1;
     }
     .VRcontent {
       color: #F6F6F6;
-      font-family: 'Ubuntu', sans-serif;
+      font-family: 'Montserrat Alternates', sans-serif;
       font-size: 20px;
       line-height: 1.45;
     }
     .vr {
-      color:  #F0B880;
+      font-family: 'Righteous', cursive;
+      color:  #FFFFFF;
+      opacity: 0.7;
+      letter-spacing: -0.06em;
+      font-size: 60px;
       -webkit-animation: fadeInTitle ease 2s;
       -webkit-animation-iteration-count: 1;
       -webkit-animation-fill-mode: forwards;
@@ -57,19 +63,26 @@
 
        }
     }
-
+    .aboutVR{
+      text-align: center;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
   </style>
 </head>
 <body class="virtual">
-
+<button onclick="window.location.href = 'index.html';" class="homepageButton">portfolio</button>
 <div class="parallax-container">
   <video autoplay muted loop id="myVideo" width="840" height="1000">
     <source src="3D_screencapture.mp4" type="video/mp4">
   </video>
 </div>
   <div class="VRcontent">
-    <h1 class="vr"> 3D Cappilary Vessels<br> in VR </h1>
-    <p>
+    <div class="vr"> 3D Cappilary Vessels<br> in VR </div>
+    <br>
+    <br>
+    <br>
+    <p class="aboutVR">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula pulvinar erat id lobortis. Mauris sodales vel nulla sit amet dapibus. Duis luctus porttitor leo. Nulla vulputate arcu ut dui dignissim, iaculis posuere augue ultrices. Aenean suscipit sapien in orci venenatis maximus. Donec nisl elit, suscipit quis bibendum vitae, venenatis quis lacus. Suspendisse id dui eget nisi interdum sagittis. Vestibulum a ex erat. Aenean leo elit, viverra quis vulputate vitae, elementum sit amet nibh. Nulla rhoncus quam a justo molestie, ut gravida risus condimentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris rutrum congue tellus ac ullamcorper. Vivamus nunc augue, interdum id turpis in, commodo condimentum quam.
 
   Nam scelerisque turpis id risus convallis, et finibus orci fermentum. Phasellus quis mollis risus, in dapibus eros. Fusce eu augue ultrices, eleifend ipsum quis, commodo magna. Morbi volutpat quis eros at rhoncus. Donec scelerisque, purus at venenatis varius, tellus purus pulvinar nisl, a tristique mauris urna ac ipsum. Maecenas consequat tellus lorem, bibendum efficitur augue vehicula eu. Mauris tristique orci sit amet faucibus faucibus. Sed vestibulum arcu at tortor consequat sollicitudin. Suspendisse in ultrices justo. Fusce non mauris euismod, mollis magna sed, tincidunt quam. Ut scelerisque justo diam, nec pharetra diam gravida non. Cras in ipsum augue. Curabitur faucibus ut velit vitae suscipit. Morbi aliquam interdum eros. Donec sit amet neque nec arcu mattis tincidunt a sodales sem. Praesent lobortis ipsum lorem, ut faucibus tellus ornare vel.

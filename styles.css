@@ -1,5 +1,20 @@
 
 /*  DOT COLOR #F08080*/
+.homepageButton{
+  float: left;
+  left: 5px;
+  top: 5px;
+  src:url("index.html");
+  border-style: solid;
+  border-color:#FFFFFF;
+  border-width: 2px;
+  transition:1s;
+  background-color: transparent;
+}
+.homepageButton:hover{
+  transition:1s;
+  background-color: #FFFFFF;
+}
 h1{
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   color:		#EFB0B0;
