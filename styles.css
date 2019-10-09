@@ -349,3 +349,35 @@ svg{
 .underline{
   transition: 1s;
 }
+.VRcontent {
+  color: #F6F6F6;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  line-height: 1.45;
+}
+.vr {
+  font-family: 'Righteous', cursive;
+  color:  #FFFFFF;
+  opacity: 0.7;
+  letter-spacing: -0.06em;
+  font-size: 60px;
+  -webkit-animation: fadeInTitle ease 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes fadeInTitle {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 0.7;
+
+   }
+}
+
+.aboutVR{
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  opacity: 1;
+}

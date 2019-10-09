@@ -1,19 +1,26 @@
   <!DOCTYPE html>
   <meta charset="utf-8">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Righteous&display=swap" rel="stylesheet">
   <style>
+  .datavis{
+      background-color: #F4F4F4;
+      position: relative;
+      -webkit-animation: fadeInBackground ease 2s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+    }
   path {
     stroke: #fff;
     fill-rule: evenodd;
-  }
-  body {
-    background-color: #F4F4F4;
-    position: relative;
   }
   svg {
     position: relative;
     float: center;
     padding: 20px;
+    -webkit-animation: fadeInWords ease 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
   }
   h1 {
     text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
@@ -23,14 +30,140 @@
     font-family: 'Questrial', sans-serif;
     text-align: center;
   }
+  #data{
+    font-family: 'Righteous', cursive;
+    letter-spacing: -0.06em;
+    font-size: 60px;
+    color: #939393;
+    position: fixed;
+    top:0;
+    z-index: 10;
+    opacity: 1;
+    padding: 20px;
+    background-color:#F4F4F4;
+    box-shadow: 0 6px 6px -8px black;
+    -webkit-animation: fadeInBackground ease 2s;
+    -webkit-animation: fadeInWords ease 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+  }
+  .dataContent{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    line-height: 1.45;
+    padding: 20px;
+    color: #939393;
+    text-align: center;
+    display: inline;
+    -webkit-animation: fadeInWords ease 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    float: left;
+  }
+  .x {
+    padding: 40px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 1.45;
+    color: #939393;
+    display:inline;
+    height: 100px;
+    -webkit-animation: fadeInWords ease 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    font-size: 25px;
+  }
+  @keyframes fadeInBackground {
+    from {
+        background-color: #F08080;
+    }
+    to {
+        background-color: #F4F4F4;
+
+     }
+  }
+  .row1{
+    padding: 20px;
+    margin-top: 200px;
+    display: table;
+    clear: both;
+    width: 100%;
+  }
+  .column2 {
+    width: 60%;
+  }
+  .column3 {
+    width: 25%;
+    border-style: solid;
+    margin-right: 20px;
+    border-radius: 20px;
+    height: 150px;
+  }
+  #projectDes{
+    margin-top:10px;
+  }
+  #layerDes{
+    margin-left:60px;
+  }
+  .bottom{
+    color: #939393;
+    text-align: center;
+  }
+  #dataButton{
+    float: right;
+    right: 5px;
+    top: 5px;
+    src:url("index.html");
+    border-style: solid;
+    border-color:#FFFFFF;
+    border-width: 2px;
+    transition:1s;
+    background-color: transparent;
+  }
+  .homepageButton:hover{
+    transition:1s;
+    background-color: #FFFFFF;
+  }
+  .spacer{
+    margin:10px;
+    line-height:15px;
+  }
   </style>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1> SPATIAL FUS MAMMAL VARIATION </h1>
-    <svg id="svg"> </svg>
+  <body class="datavis">
 
+    <div id="data">A Spatial Visualization of <button onclick="window.location.href = 'index.html';" id="dataButton">BACK</button> <br> Mammalian Amino Acid Variation of the FUS protein  </div>
+    <div class="row1">
+      <div class="x columns"> BACKGROUND </div>
+      <div class="dataContent column2">A number of substitutions in the fus protein (and other proteins with prion domains)
+        have been "linked to" disease through clinical surveys, but they may not necessarily be relevant
+        to the disease pathology. Here we analyze the orthologous fus protein sequences from mammals,
+        to observe if mammals have any variation at each amino acid location within the human sequence.
+        Variation at the points of interest in the sequence would indicate that mutations in amino acids
+        at those locations may not be related to the disease phenotype.</div>
+    </div>
+    <hr style="width:80%">
+    <div class="row1" id="projectDes">
+      <div class="dataContent column2">This visualization displays amino acid variations found in publically
+        available mammal fus protein sequences. This circular view of the variation data allows for a visual
+        seqmentation of the location of high and low amounts of variation. A visual segmentation raises
+        questions about local conservation of amino acid sequences and/or regional functionality
+        in the progression of ALS.</div>
+      <div class="x columns">PROJECT<br>DESCRIPTION</div>
+      </div>
+      <hr style="width:80%">
+      <div class="row1" style="margin-top:10px">
+        <div class = "dataContent column3" id="layerDes"> <b>Layer ONE</b> <br> The primary structure divisions of the fus protein
+          into each amino acid location by regions within the protein.</div>
+        <div class = "dataContent column3"> <b>Layer TWO</b> <br> The amino acid single letter abbreviation and
+           location within the primary structure.</div>
+        <div class = "dataContent column3"> <b>Layer THREE</b> <br> <em>(click on either layer one or layer two to
+          view layer three)</em><br> The Amino acid substitutions found from clinical ALS data.</div>
+      </div>
+
+    <svg id="svg"> </svg>
+    <p class="bottom"> Adapted from https://observablehq.com/@confessin/d3-zoomable-sunburst created with D3 Visualization Library <br><br by amber chevannes.</p>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Poppins|Sarabun" rel="stylesheet">
   <script>
