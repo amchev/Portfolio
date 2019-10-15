@@ -15,6 +15,8 @@
   transition:1s;
   background-color: #FFFFFF;
 }
+
+
 h1{
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   color:		#EFB0B0;
@@ -35,6 +37,20 @@ textarea:focus, input:focus{
   background-color: 	#F08080;
   position: relative;
   text-align: center;
+
+}
+
+@media only screen and (max-width: 415px){
+  h1{
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    color:		#EFB0B0;
+    opacity: 0.7;
+    font-size: 75px;
+    text-align: left;
+    transition: opacity 2s;
+    margin-bottom: -1px;
+    margin-top: 0px;
+  }
 }
 
 /* NAME TITLE FADE IN */
@@ -56,7 +72,7 @@ textarea:focus, input:focus{
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
 }
-@media only screen and (min-width: 961px) {
+
 .dot {
   background-color: 	#F08080;
   height: 200px;
@@ -69,8 +85,8 @@ textarea:focus, input:focus{
   font-size: 30px;
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
 }
-}
-@media only screen and (max-width: 400px) {
+
+@media only screen and (max-width: 415px){
   .dot {
     background-color: 	#F08080;
     height: 200px;
@@ -79,8 +95,10 @@ textarea:focus, input:focus{
     display: inline-block;
     border: none;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
-    margin-left: 20%;
-    margin-right:20%;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 40px;
+    margin-bottom: 10px;
     font-size: 30px;
     text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
   }
@@ -100,6 +118,12 @@ textarea:focus, input:focus{
 .dot_green{
   color: #F08080;
   background-color:#F08080;
+}
+@media only screen and (max-width: 415px){
+  .built{
+    width: 400px;
+    margin-left: 60px;
+  }
 }
 @keyframes fadeInAnimation {
   0% {
@@ -145,6 +169,22 @@ to{
   border-radius: 50%;
 }
 
+@media only screen and (max-width: 415px){
+  .fa {
+    display: inline-block;
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-left: 180px;
+    margin-top: 20px;
+  }
+}
+
+
 .fa-linkedin {
   background: #007bb5;
   color: white;
@@ -152,11 +192,17 @@ to{
 .fa:hover {
   opacity: 0.7;
 }
-/* Spacing  */
-.space {
-  margin: 130px;
+@media only screen and (max-width: 640px){
+  #space {
+    width: 100%;
+    height: 50px;
+  }
 }
-
+/* Spacing  */
+#space {
+  width: 100%;
+  height: 130px;
+}
 
 /*-----------  CV SECTION ---------------*/
 
@@ -186,6 +232,7 @@ to{
 #space{
   height: 50px;
 }
+
 /* Paper-Like effect */
 #box{
   width:  60%;
@@ -205,6 +252,29 @@ to{
   -webkit-animation: fadeInPaper ease 2s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 415px){
+  #box{
+    width:  70%;
+    height: 600px;
+    margin: auto;
+    padding-bottom: 10px;
+    background-color: #f29696;
+    position: relative;
+    -moz-border-radius: 4px;
+    padding: 2em 1.5em;
+    /*color: #CF8383;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+    line-height: 1.5;*/
+    font-size: 20px;
+    margin: 20px auto;
+    margin-top: 0px;
+    box-shadow: 6px 6px 0 -6px black, 8px 0 6px -8px black;
+    -webkit-animation: fadeInPaper ease 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+  }
 }
 #box:before, #box:after {
   z-index: -1;
@@ -232,6 +302,16 @@ to{
   text-shadow: 3px 2px #FF5733  ;
   font-size: 60px;
   font-family: 'Ubuntu', sans-serif;
+}
+@media only screen and (max-width: 415px){
+  .name {
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+    color:  #f29696;
+    text-shadow: 3px 2px #FF5733  ;
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+  }
 }
 /* Break up the page  */
 hr {
@@ -264,6 +344,13 @@ hr {
   float: right;
   text-align: right;
 }
+@media only screen and (max-width: 640px){
+  .inlineright{
+    float: left;
+    text-align: left;
+  }
+}
+
 /* Skills section table */
 .column1 {
   float: left;
@@ -286,6 +373,14 @@ hr {
 /* text spacing */
 .small {
   margin: 2px;
+}
+@media only screen and (max-width: 640px){
+  .small {
+    margin: 10px;
+  }
+}
+.columns2{
+  font-size: 1-
 }
 .description {
   font-family: 'Ubuntu', sans-serif;
